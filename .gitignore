@@ -3,3 +3,4 @@ data/
 *.duckdb
 .ipynb_checkpoints/
 .DS_Store
+explore_output.txt
