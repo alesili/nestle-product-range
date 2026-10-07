@@ -2,15 +2,16 @@ import duckdb
 
 con = duckdb.connect("nestle.duckdb")
 
-# Rule 1: keywords in product name or category tags (first match wins)
+# Rule 1: keywords in product name or category tags (accents removed, first match wins)
 rules = [
- ("Breakfast cereals", r"\b(cereals?|muesli|granola|cornflakes|corn flakes)\b"),
- ("Coffee & creamers", r"\b(coffee|espresso|latte|cappuccino|creamers?|mocha)\b"),
- ("Chocolate & confectionery", r"\b(chocolates?|confectioner(y|ies)|candy|candies|wafers?|biscuits?|cookies?)\b"),
- ("Infant & young child nutrition", r"\b(baby|infant|toddler|purees?|formula|stage [1-4])\b"),
- ("Culinary & meals", r"\b(soups?|sauces?|noodles?|bouillon|seasoning|pasta|pizza|meals?|dressing|mayonnaise|ketchup|gravy|stock|ravioli|tortellini)\b"),
- ("Dairy & milk drinks", r"\b(milk|yogh?urt|dairy|ice cream|malt|cocoa powder)\b"),
- ("Beverages", r"\b(water|juice|beverages?|drinks?|tea)\b"),
+ ("Breakfast cereals", r"\b(cereals?|cereales|cereais|muesli|musli|granola|cornflakes|corn flakes|chocapic|cheerios|trix|golden grahams|shreddies|cookie crisp|cini minis)\b"),
+ ("Health & clinical nutrition", r"\b(boost|nutren|peptamen|optifast|resource|thicken\w*|health science)\b"),
+ ("Coffee & creamers", r"\b(coffee|cafe|kaffee|kaffe|espresso|latte|cappuccino|creamers?|mocha|nescafe|nespresso|dolce gusto|coffee mate)\b"),
+ ("Chocolate & confectionery", r"\b(chocolat\w*|schokolade|cioccolato|confectioner\w*|candy|candies|wafers?|biscuits?|cookies?|kitkat|kit kat|munch|smarties|quality street|aero|crunch|milkybar|caramel\w*|toffee|bonbons?)\b"),
+ ("Infant & young child nutrition", r"\b(baby|infant|toddler|purees?|puree|formula|stage [1-4]|lactogen|nestum|follow on|growing up|gerber|cerelac)\b"),
+ ("Culinary & meals", r"\b(soups?|soupe|sopa|suppe|zuppa|sauces?|salsa|noodles?|bouillon|seasoning|pasta|pizza|meals?|dressing|mayonnaise|ketchup|gravy|stock|ravioli|tortellini|maggi|herta|buitoni|thomy|garden gourmet|sausages?|nuggets?|cubes?)\b"),
+ ("Dairy & milk drinks", r"\b(milk|leche|lait|leite|latte|yogh?urt|iogurte|dairy|ice cream|helado|glace|malt|cocoa powder|cream|crema|condensed|evaporated|milo|nesquik|nido|ninho|molico|nescau)\b"),
+ ("Beverages", r"\b(water|agua|eau|wasser|juice|jugo|jus|beverages?|bebida|drinks?|tea|soda|lemonade|smoothie|shake)\b"),
 ]
 
 # Rule 2: default category by brand, used only if rule 1 finds nothing
@@ -43,8 +44,8 @@ FROM (
   SELECT *, {content_case} AS content_cat, {brand_case} AS brand_cat
   FROM (
     SELECT *,
-      lower(coalesce(name, '') || ' ' ||
-            replace(replace(coalesce(array_to_string(categories_tags, ' '), ''), '-', ' '), ':', ' ')) AS txt
+      lower(strip_accents(coalesce(name, '') || ' ' ||
+            replace(replace(coalesce(array_to_string(categories_tags, ' '), ''), '-', ' '), ':', ' '))) AS txt
     FROM nestle_flat
   )
 )
@@ -63,18 +64,26 @@ print(con.sql("""
     FROM nestle_cat GROUP BY 1 ORDER BY 2 DESC
 """).df().to_string(index=False))
 
-print("\nUNCLASSIFIED: with and without a product name")
+print("\nUNCLASSIFIED: total and with a product name")
 print(con.sql("""
     SELECT count(*) AS unclassified, count(name) AS with_name
     FROM nestle_cat WHERE category = 'Unclassified'
 """).df().to_string(index=False))
 
-print("\nSAMPLE OF UNCLASSIFIED NAMES (30)")
+con.sql("SELECT setseed(0.42)")
+print("\nSPOT CHECK: 4 random keyword-classified products per category")
 print(con.sql("""
-    SELECT brand, name FROM nestle_cat
-    WHERE category = 'Unclassified' AND name IS NOT NULL
-    USING SAMPLE 30 ROWS
+    SELECT category, brand, name FROM nestle_cat
+    WHERE category_source = 'name/category keywords' AND name IS NOT NULL
+    QUALIFY row_number() OVER (PARTITION BY category ORDER BY random()) <= 4
+    ORDER BY category
 """).df().to_string(index=False))
+
+con.sql("""COPY (SELECT brand, name, countries_tags[1] AS first_country
+               FROM nestle_cat
+               WHERE category = 'Unclassified' AND name IS NOT NULL
+               ORDER BY brand, name)
+           TO 'data/processed/unclassified_names.csv' (HEADER)""")
 
 con.sql("""COPY (SELECT category, category_source, count(*) AS products
                FROM nestle_cat GROUP BY 1, 2 ORDER BY 1, 2)
