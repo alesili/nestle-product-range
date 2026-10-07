@@ -1,0 +1,11 @@
+step,rows_affected
+duplicate barcodes removed,0
+kcal: set to missing (impossible or unknown value),2
+sugars: set to missing (impossible or unknown value),1
+fat: set to missing (impossible or unknown value),1
+sat_fat: set to missing (impossible or unknown value),2
+salt: set to missing (impossible or unknown value),1
+protein: set to missing (impossible or unknown value),0
+fiber: set to missing (impossible or unknown value),0
+nutriscore_grade: set to missing (impossible or unknown value),2737
+nova_group: set to missing (impossible or unknown value),0
