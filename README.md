@@ -35,21 +35,20 @@ values and labels vary between product categories?
 Range: 3,158 Nestlé products; the largest groups are coffee and creamers (623) and
 culinary and meals (606).
 
-| Category | Products | Sugar, median (middle half) | n (sugar) | Salt, median | Saturated fat, median |
-|---|---|---|---|---|---|
-| Chocolate & confectionery | 418 | 45.4 (26.3–53.0) | 274 | 0.25 | 13.5 |
-| Coffee & creamers | 623 | 27.3 (4.9–40.2) | 244 | 0.17 | 1.7 |
-| Dairy & milk drinks | 325 | 26.6 (9.2–45.6) | 181 | 0.25 | 2.8 |
-| Breakfast cereals | 137 | 24.0 (11.2–28.4) | 79 | 0.56 | 1.2 |
-| Beverages* | 63 | 10.2 (1.9–22.4) | 31 | 0.23 | 0.1 |
-| Health & clinical nutrition* | 35 | 8.4 (0.2–9.6) | 27 | 0.38 | 0.4 |
-| Infant & young child nutrition | 325 | 8.1 (1.5–13.5) | 148 | 0.25 | 0.0 |
-| Culinary & meals | 606 | 3.4 (1.1–8.3) | 329 | 1.99 | 1.2 |
-| Unclassified | 626 | 15.0 (3.8–29.0) | 245 | 0.27 | 3.1 |
+| Category | Products | Sugar (median) | Salt (median) | Saturated fat (median) |
+|---|---|---|---|---|
+| Chocolate & confectionery | 418 | 45.4 | 0.25 | 13.5 |
+| Coffee & creamers | 623 | 27.3 | 0.17 | 1.7 |
+| Dairy & milk drinks | 325 | 26.6 | 0.25 | 2.8 |
+| Breakfast cereals | 137 | 24.0 | 0.56 | 1.2 |
+| Beverages* | 63 | 10.2 | 0.23 | 0.1 |
+| Health & clinical nutrition* | 35 | 8.4 | 0.38 | 0.4 |
+| Infant & young child nutrition | 325 | 8.1 | 0.25 | 0.0 |
+| Culinary & meals | 606 | 3.4 | 1.99 | 1.2 |
+| Unclassified | 626 | 15.0 | 0.27 | 3.1 |
 
-Values in g per 100 g (or 100 ml) as listed. Median with the middle half of products in brackets (25th to 75th percentile). Sorted by median sugar; Unclassified last.
-n = products with a sugar value; sample sizes for salt and saturated fat are in `outputs/q3_salt_by_category.csv` and `outputs/q4_satfat_by_category.csv`.
-\* Small sample (n below 35): read with caution.
+Values in g per 100 g (or 100 ml) as listed in the data. Sorted by median sugar; Unclassified last.
+\* Small sample, read with caution.
 
 - **Sugar** varies most between categories: median 3.4 g per 100 g in culinary products and
   45.4 g in chocolate and confectionery.
