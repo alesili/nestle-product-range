@@ -1,0 +1,38 @@
+category,grade,products,pct_of_graded
+Beverages,A,4,26.7
+Beverages,B,5,33.3
+Beverages,C,3,20.0
+Beverages,E,3,20.0
+Breakfast cereals,A,5,11.6
+Breakfast cereals,B,3,7.0
+Breakfast cereals,C,11,25.6
+Breakfast cereals,D,22,51.2
+Breakfast cereals,E,2,4.7
+Chocolate & confectionery,C,1,0.8
+Chocolate & confectionery,D,17,13.7
+Chocolate & confectionery,E,106,85.5
+Coffee & creamers,B,18,29.5
+Coffee & creamers,C,4,6.6
+Coffee & creamers,D,14,23.0
+Coffee & creamers,E,25,41.0
+Culinary & meals,A,7,7.8
+Culinary & meals,B,6,6.7
+Culinary & meals,C,21,23.3
+Culinary & meals,D,25,27.8
+Culinary & meals,E,31,34.4
+Dairy & milk drinks,B,9,18.8
+Dairy & milk drinks,C,9,18.8
+Dairy & milk drinks,D,10,20.8
+Dairy & milk drinks,E,20,41.7
+Health & clinical nutrition,A,1,14.3
+Health & clinical nutrition,B,1,14.3
+Health & clinical nutrition,C,1,14.3
+Health & clinical nutrition,D,1,14.3
+Health & clinical nutrition,E,3,42.9
+Infant & young child nutrition,B,2,50.0
+Infant & young child nutrition,C,2,50.0
+Unclassified,A,3,10.7
+Unclassified,B,2,7.1
+Unclassified,C,6,21.4
+Unclassified,D,12,42.9
+Unclassified,E,5,17.9

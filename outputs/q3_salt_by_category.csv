@@ -1,0 +1,10 @@
+category,n_salt,salt_median,salt_p25,salt_p75
+Beverages,29,0.23,0.0,1.72
+Breakfast cereals,74,0.56,0.28,0.84
+Chocolate & confectionery,224,0.25,0.14,0.48
+Coffee & creamers,188,0.17,0.06,0.56
+Culinary & meals,266,1.99,1.02,5.47
+Dairy & milk drinks,158,0.25,0.1,0.44
+Health & clinical nutrition,25,0.38,0.22,1.01
+Infant & young child nutrition,83,0.25,0.06,0.48
+Unclassified,159,0.27,0.12,0.63

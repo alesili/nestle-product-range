@@ -1,0 +1,169 @@
+
+=== Products per category ===
+                      category  products  pct_of_range
+                  Unclassified       626          19.8
+             Coffee & creamers       623          19.7
+              Culinary & meals       606          19.2
+     Chocolate & confectionery       418          13.2
+Infant & young child nutrition       325          10.3
+           Dairy & milk drinks       325          10.3
+             Breakfast cereals       137           4.3
+                     Beverages        63           2.0
+   Health & clinical nutrition        35           1.1
+
+=== Sugar per 100 g by category (median and middle half; shown if n >= 20) ===
+                      category  n_sugars  sugars_median  sugars_p25  sugars_p75
+                     Beverages        31      10.200000    1.900000   22.400000
+             Breakfast cereals        79      24.000000   11.200000   28.400000
+     Chocolate & confectionery       274      45.400002   26.299999   53.000000
+             Coffee & creamers       244      27.299999    4.900000   40.200001
+              Culinary & meals       329       3.400000    1.100000    8.300000
+           Dairy & milk drinks       181      26.600000    9.200000   45.599998
+   Health & clinical nutrition        27       8.400000    0.200000    9.600000
+Infant & young child nutrition       148       8.100000    1.500000   13.500000
+                  Unclassified       245      15.000000    3.800000   29.000000
+
+=== Salt per 100 g by category ===
+                      category  n_salt  salt_median  salt_p25  salt_p75
+                     Beverages      29         0.23      0.00      1.72
+             Breakfast cereals      74         0.56      0.28      0.84
+     Chocolate & confectionery     224         0.25      0.14      0.48
+             Coffee & creamers     188         0.17      0.06      0.56
+              Culinary & meals     266         1.99      1.02      5.47
+           Dairy & milk drinks     158         0.25      0.10      0.44
+   Health & clinical nutrition      25         0.38      0.22      1.01
+Infant & young child nutrition      83         0.25      0.06      0.48
+                  Unclassified     159         0.27      0.12      0.63
+
+=== Saturated fat per 100 g by category ===
+                      category  n_sat_fat  sat_fat_median  sat_fat_p25  sat_fat_p75
+                     Beverages         28             0.1          0.0          0.7
+             Breakfast cereals         76             1.2          0.5          3.0
+     Chocolate & confectionery        273            13.5          5.9         17.0
+             Coffee & creamers        225             1.7          0.0          9.2
+              Culinary & meals        324             1.2          0.2          3.7
+           Dairy & milk drinks        173             2.8          0.8          6.5
+   Health & clinical nutrition         26             0.4          0.0          1.1
+Infant & young child nutrition        143             0.0          0.0          0.2
+                  Unclassified        227             3.1          0.7          8.5
+
+=== Energy (kcal per 100 g) by category ===
+                      category  n_kcal  kcal_median  kcal_p25  kcal_p75
+                     Beverages      25         58.0      10.0     368.0
+             Breakfast cereals      76        383.0     367.0     399.0
+     Chocolate & confectionery     272        485.0     345.0     529.0
+             Coffee & creamers     252        200.0      50.0     368.0
+              Culinary & meals     339        244.0     113.0     333.0
+           Dairy & milk drinks     190        300.0      85.0     410.0
+   Health & clinical nutrition      27        153.0     101.0     362.0
+Infant & young child nutrition     137         89.0      58.0     389.0
+                  Unclassified     246        226.0      92.0     388.0
+
+=== Nutri-Score by category (share of graded products) ===
+                      category grade  products  pct_of_graded
+                     Beverages     A         4           26.7
+                     Beverages     B         5           33.3
+                     Beverages     C         3           20.0
+                     Beverages     E         3           20.0
+             Breakfast cereals     A         5           11.6
+             Breakfast cereals     B         3            7.0
+             Breakfast cereals     C        11           25.6
+             Breakfast cereals     D        22           51.2
+             Breakfast cereals     E         2            4.7
+     Chocolate & confectionery     C         1            0.8
+     Chocolate & confectionery     D        17           13.7
+     Chocolate & confectionery     E       106           85.5
+             Coffee & creamers     B        18           29.5
+             Coffee & creamers     C         4            6.6
+             Coffee & creamers     D        14           23.0
+             Coffee & creamers     E        25           41.0
+              Culinary & meals     A         7            7.8
+              Culinary & meals     B         6            6.7
+              Culinary & meals     C        21           23.3
+              Culinary & meals     D        25           27.8
+              Culinary & meals     E        31           34.4
+           Dairy & milk drinks     B         9           18.8
+           Dairy & milk drinks     C         9           18.8
+           Dairy & milk drinks     D        10           20.8
+           Dairy & milk drinks     E        20           41.7
+   Health & clinical nutrition     A         1           14.3
+   Health & clinical nutrition     B         1           14.3
+   Health & clinical nutrition     C         1           14.3
+   Health & clinical nutrition     D         1           14.3
+   Health & clinical nutrition     E         3           42.9
+Infant & young child nutrition     B         2           50.0
+Infant & young child nutrition     C         2           50.0
+                  Unclassified     A         3           10.7
+                  Unclassified     B         2            7.1
+                  Unclassified     C         6           21.4
+                  Unclassified     D        12           42.9
+                  Unclassified     E         5           17.9
+
+=== NOVA group by category (share of products with a NOVA group) ===
+                      category  nova_group  products  pct_of_nova
+                     Beverages           1         9         33.3
+                     Beverages           2         1          3.7
+                     Beverages           4        17         63.0
+             Breakfast cereals           4        31        100.0
+     Chocolate & confectionery           1         2          1.5
+     Chocolate & confectionery           3         3          2.2
+     Chocolate & confectionery           4       129         96.3
+             Coffee & creamers           1        24         19.5
+             Coffee & creamers           3         2          1.6
+             Coffee & creamers           4        97         78.9
+              Culinary & meals           2         1          0.8
+              Culinary & meals           3         9          7.2
+              Culinary & meals           4       115         92.0
+           Dairy & milk drinks           1         1          1.6
+           Dairy & milk drinks           3         5          7.9
+           Dairy & milk drinks           4        57         90.5
+   Health & clinical nutrition           3         1         10.0
+   Health & clinical nutrition           4         9         90.0
+Infant & young child nutrition           1         5         16.7
+Infant & young child nutrition           3         2          6.7
+Infant & young child nutrition           4        23         76.7
+                  Unclassified           1         1          1.2
+                  Unclassified           2         1          1.2
+                  Unclassified           4        84         97.7
+
+=== Top 15 countries by number of products (excluding 'world') ===
+          country  products
+ en:united-states       672
+     en:australia       203
+        en:brazil       104
+         en:india        99
+        en:norway        94
+   en:switzerland        87
+      en:thailand        85
+en:united-kingdom        75
+      en:bulgaria        74
+     en:argentina        71
+en:czech-republic        69
+         en:japan        55
+   en:netherlands        54
+   en:new-zealand        51
+       en:morocco        49
+
+=== Products per brand ===
+         brand  products
+        nestle      1746
+         maggi       426
+       nescafe       305
+        gerber       204
+     nespresso       126
+   coffee-mate        60
+       nesquik        52
+          milo        38
+         thomy        35
+       buitoni        32
+garden-gourmet        31
+        nesfit        25
+         herta        19
+   dolce-gusto        17
+          nido        11
+         ninho         7
+        nescau         7
+       cailler         6
+       nesvita         4
+        molico         4
+       cerelac         3

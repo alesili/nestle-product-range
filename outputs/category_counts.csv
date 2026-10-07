@@ -1,15 +1,16 @@
 category,category_source,products
-Beverages,name/category keywords,67
-Breakfast cereals,name/category keywords,140
+Beverages,name/category keywords,63
+Breakfast cereals,name/category keywords,137
 Chocolate & confectionery,brand (clear),6
-Chocolate & confectionery,name/category keywords,419
+Chocolate & confectionery,name/category keywords,412
 Coffee & creamers,brand (clear),508
 Coffee & creamers,name/category keywords,115
 Culinary & meals,brand (clear),543
-Culinary & meals,name/category keywords,66
-Dairy & milk drinks,brand (default),40
-Dairy & milk drinks,name/category keywords,273
+Culinary & meals,name/category keywords,63
+Dairy & milk drinks,brand (clear),38
+Dairy & milk drinks,brand (default),27
+Dairy & milk drinks,name/category keywords,260
 Health & clinical nutrition,name/category keywords,35
 Infant & young child nutrition,brand (clear),207
-Infant & young child nutrition,name/category keywords,101
-Unclassified,none,638
+Infant & young child nutrition,name/category keywords,118
+Unclassified,none,626

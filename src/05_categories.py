@@ -11,6 +11,7 @@ strong_brand = {
  "herta": "Culinary & meals",
  "gerber": "Infant & young child nutrition", "cerelac": "Infant & young child nutrition",
  "cailler": "Chocolate & confectionery",
+ "milo": "Dairy & milk drinks",
 }
 
 # Priority 2: keywords in product name or category tags (accents removed, first match wins)
@@ -20,7 +21,7 @@ rules = [
  ("Health & clinical nutrition", r"\b(boost|nutren|peptamen|optifast|resource|thicken\w*|beneprotein|health science)\b"),
  ("Coffee & creamers", r"\b(coffees?|cafe|kaffee|kaffe|espresso|latte|cappuccino|creamers?|mocha|nescafe|nespresso|dolce gusto|coffee mate)\b"),
  ("Chocolate & confectionery", r"\b(chocolat\w*|schokolade|cioccolato|confectioner\w*|candy|candies|wafers?|biscuits?|biscoito|cookies?|kitkat|kit kat|munch|smarties|quality street|aero|crunch|milkybar|caramel\w*|toffee|bonbons?|brownies?|cake)\b"),
- ("Infant & young child nutrition", r"\b(baby|infant|toddler|purees?|formula|stage [1-4]|lactogen|nestum|follow on|growing up|gerber|cerelac|beba|batita|aptamil|opti.?pro)\b"),
+ ("Infant & young child nutrition", r"\b(baby|infant|toddler|purees?|formula|stage [1-4]|lactogen|nestum|follow on|growing up|gerber|cerelac|beba|batita|aptamil|naturnes|neturnes|opti.?pro)\b"),
  ("Culinary & meals", r"\b(soups?|soupe|sopa|suppe|zuppa|sauces?|salsa|noodles?|bouillon|seasoning|pasta|pizza|meals?|dressing|mayonnaise|ketchup|gravy|stock|ravioli|tortellini|tortelloni|maggi|herta|buitoni|thomy|garden gourmet|sausages?|nuggets?|cubes?|hot pockets?|bowls?|arroz|rice)\b"),
  ("Dairy & milk drinks", r"\b(milk|leche|lait|leite|latte|yogh?urt|iogurte|dairy|ice ?cream|icecream|helado|glace|malt|cocoa|cacao|cream|crema|condensed|evaporated|milo|nesquik|nido|ninho|molico|nescau|buttermilk|bear brand|acti v|breakfast essentials)\b"),
  ("Beverages", r"\b(water|agua|eau|wasser|juice|jugo|jus|beverages?|bebida|drinks?|tea|soda|lemonade|smoothie|shake)\b"),
